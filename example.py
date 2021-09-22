@@ -8,8 +8,8 @@ from possibilities import PossibiltyDistribution as PD
 pi_1 = PD([1., 1., 0.5])
 pi_2 = PD([1., 0.5, 1.])
 
-sup = pi_1 ^ pi_2
-inf = pi_1 | pi_2
+sup = pi_1 | pi_2
+inf = pi_1 ^ pi_2
 
 params = {"x": np.array([1, 2, 3]), 
 		"align":"center",
@@ -18,7 +18,7 @@ params = {"x": np.array([1, 2, 3]),
 xlabel = "$\Omega$"
 ylabels = ["$\pi_1$", "$\pi_2$", "$\pi_1 \land \pi_2$", "$\pi_1 \lor \pi_2$"]
 heights = [pi.possibilities for pi in [pi_1, pi_2, inf, sup]]
-colors = ["blue", "orange", "green", "red"]
+colors = ["blue", "orange", "red", "green"]
 
 fig, axs = plt.subplots(2, 2)
 
